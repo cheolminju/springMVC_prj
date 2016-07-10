@@ -34,7 +34,7 @@
 </div>
 </section>
 
-<<script type="text/javascript">
+<script type="text/javascript">
 var result = '${msg}';
 
 if(result == 'success') {
