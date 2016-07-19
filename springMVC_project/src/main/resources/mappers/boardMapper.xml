@@ -5,6 +5,83 @@
 
 <mapper namespace="org.zerock.mapper.BoardMapper">
 	
+	<select id="countPaging" resultType="int">
+		<![CDATA[
+			SELECT
+				COUNT(BNO)
+			FROM
+				TBL_BOARD
+			WHERE
+				BNO > 0
+		]]>
+	</select>
+	
+	<select id="listAll" resultType="org.zerock.domain.BoardVO">
+		<![CDATA[
+			SELECT
+				BNO
+				,TITLE
+				,CONTENT
+				,WRITER
+				,REGDATE
+				,VIEWCNT
+			FROM
+				TBL_BOARD
+			WHERE
+				BNO > 0
+			ORDER BY BNO DESC, REGDATE DESC
+			]]>
+	</select>
+	
+	<select id="listPage" resultType="BoardVO">
+		<![CDATA[
+			SELECT
+				BNO
+				,TITLE
+				,CONTENT
+				,WRITER
+				,REGDATE
+				,VIEWCNT
+			FROM
+				TBL_BOARD
+			WHERE BNO > 0
+			ORDER BY BNO DESC, REGDATE DESC
+			LIMIT #{page}, 10
+		]]>
+	</select>
+	
+	<select id="listCriteria" resultType="BoardVO">
+		<![CDATA[
+			SELECT
+				BNO
+				,TITLE
+				,CONTENT
+				,WRITER
+				,REGDATE
+				,VIEWCNT
+			FROM
+				TBL_BOARD
+			WHERE BNO > 0
+			ORDER BY BNO DESC, REGDATE DESC
+			LIMIT #{pageStart}, #{perPageNum}
+		]]>
+	</select>
+	
+	<select id="read" resultType="org.zerock.domain.BoardVO">
+		<![CDATA[
+			SELECT
+				BNO
+				,TITLE
+				,CONTENT
+				,WRITER
+				,REGDATE
+				,VIEWCNT
+			FROM
+				TBL_BOARD
+			WHERE BNO = #{bno}
+			]]>		
+	</select>
+	
 	<insert id="create">
 		INSERT INTO TBL_BOARD
 			(
@@ -20,19 +97,6 @@
 			)
 	</insert>
 	
-	<select id="read" resultType="org.zerock.domain.BoardVO">
-		SELECT
-			BNO
-			,TITLE
-			,CONTENT
-			,WRITER
-			,REGDATE
-			,VIEWCNT
-		FROM
-			TBL_BOARD
-		WHERE BNO = #{bno}		
-	</select>
-	
 	<update id="update">
 		UPDATE TBL_BOARD
 		SET
@@ -47,20 +111,5 @@
 		WHERE
 			BNO = #{bno}
 	</delete>
-	
-	<select id="listAll" resultType="org.zerock.domain.BoardVO">
-		SELECT
-			BNO
-			,TITLE
-			,CONTENT
-			,WRITER
-			,REGDATE
-			,VIEWCNT
-		FROM
-			TBL_BOARD
-		WHERE
-			BNO > 0
-		ORDER BY BNO DESC, REGDATE DESC
-	</select>
 	
 </mapper>
