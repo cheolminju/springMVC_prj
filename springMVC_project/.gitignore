@@ -1,8 +1,8 @@
 /bin/
-/target/*
 /.gradle/
 /.settings/
 /.classpath
+/.project
 /build/
 /bower_components/
 /src/main/webapp/lib/
