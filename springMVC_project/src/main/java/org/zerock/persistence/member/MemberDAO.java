@@ -1,6 +1,6 @@
-package org.zerock.persistence;
+package org.zerock.persistence.member;
 
-import org.zerock.domain.MemberVO;
+import org.zerock.domain.member.MemberVO;
 
 public interface MemberDAO {
 	

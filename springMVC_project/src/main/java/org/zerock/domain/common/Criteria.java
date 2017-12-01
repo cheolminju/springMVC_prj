@@ -1,4 +1,4 @@
-package org.zerock.domain;
+package org.zerock.domain.common;
 
 public class Criteria {
 	private int page;

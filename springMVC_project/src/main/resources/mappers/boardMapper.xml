@@ -16,7 +16,7 @@
 		]]>
 	</select>
 	
-	<select id="listAll" resultType="org.zerock.domain.BoardVO">
+	<select id="listAll" resultType="org.zerock.domain.board.BoardVO">
 		<![CDATA[
 			SELECT
 				BNO
@@ -67,7 +67,7 @@
 		]]>
 	</select>
 	
-	<select id="read" resultType="org.zerock.domain.BoardVO">
+	<select id="read" resultType="org.zerock.domain.board.BoardVO">
 		<![CDATA[
 			SELECT
 				BNO

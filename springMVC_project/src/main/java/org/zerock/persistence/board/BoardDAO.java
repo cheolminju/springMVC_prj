@@ -1,9 +1,9 @@
-package org.zerock.persistence;
+package org.zerock.persistence.board;
 
 import java.util.List;
 
-import org.zerock.domain.BoardVO;
-import org.zerock.domain.Criteria;
+import org.zerock.domain.board.BoardVO;
+import org.zerock.domain.common.Criteria;
 
 public interface BoardDAO {
 	

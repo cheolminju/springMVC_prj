@@ -1,13 +1,13 @@
-package org.zerock.service;
+package org.zerock.service.board;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
-import org.zerock.domain.BoardVO;
-import org.zerock.domain.Criteria;
-import org.zerock.persistence.BoardDAO;
+import org.zerock.domain.board.BoardVO;
+import org.zerock.domain.common.Criteria;
+import org.zerock.persistence.board.BoardDAO;
 
 @Service
 public class BoardServiceImpl implements BoardService{

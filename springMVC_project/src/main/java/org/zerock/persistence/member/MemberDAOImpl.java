@@ -1,4 +1,4 @@
-package org.zerock.persistence;
+package org.zerock.persistence.member;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,7 +7,7 @@ import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
-import org.zerock.domain.MemberVO;
+import org.zerock.domain.member.MemberVO;
 
 @Repository
 public class MemberDAOImpl implements MemberDAO {

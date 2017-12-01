@@ -26,13 +26,13 @@
 			)
 	</insert>
 	
-	<select id="readMember" resultType="org.zerock.domain.MemberVO">	
+	<select id="readMember" resultType="org.zerock.domain.member.MemberVO">	
 		SELECT *
 		FROM TBL_MEMBER
 		WHERE USERID = #{userid}
 	</select>
 	
-	<select id="readWithPW" resultType="org.zerock.domain.MemberVO">
+	<select id="readWithPW" resultType="org.zerock.domain.member.MemberVO">
 		SELECT *
 		FROM TBL_MEMBER
 		WHERE USERID = #{userid}

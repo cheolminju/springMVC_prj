@@ -1,4 +1,4 @@
-package org.zerock.controller;
+package org.zerock.controller.board;
 
 import javax.inject.Inject;
 
@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.zerock.domain.BoardVO;
-import org.zerock.domain.Criteria;
-import org.zerock.domain.PageMaker;
-import org.zerock.service.BoardService;
+import org.zerock.domain.board.BoardVO;
+import org.zerock.domain.common.Criteria;
+import org.zerock.domain.common.PageMaker;
+import org.zerock.service.board.BoardService;
 
 @Controller
 @RequestMapping("/board/*")
