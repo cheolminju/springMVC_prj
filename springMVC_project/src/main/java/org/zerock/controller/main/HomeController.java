@@ -15,9 +15,15 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
+	public String index(Locale locale, Model model) {
 		
 		return "index";
+	}
+	
+	@RequestMapping(value = "/indexMain", method = RequestMethod.GET)
+	public String indexMain(Locale locale, Model model) {
+		
+		return "indexMain";
 	}
 	
 }

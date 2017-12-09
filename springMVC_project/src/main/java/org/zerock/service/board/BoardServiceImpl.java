@@ -2,8 +2,7 @@ package org.zerock.service.board;
 
 import java.util.List;
 
-import javax.inject.Inject;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zerock.domain.board.BoardVO;
 import org.zerock.domain.common.Criteria;
@@ -12,7 +11,7 @@ import org.zerock.persistence.board.BoardDAO;
 @Service
 public class BoardServiceImpl implements BoardService{
 
-	@Inject
+	@Autowired
 	private BoardDAO dao;
 
 	@Override

@@ -37,6 +37,6 @@ public class MemberDAOTest {
 	@Test
 	public void readMember() throws Exception {
 		MemberVO result = dao.readMember("testUser");
-		 System.out.println(result.getUserid());
+		 System.out.println(result.getUserId());
 	}
 }

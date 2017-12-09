@@ -3,16 +3,15 @@ package org.zerock.persistence.member;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.inject.Inject;
-
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.zerock.domain.member.MemberVO;
 
 @Repository
 public class MemberDAOImpl implements MemberDAO {
 	
-	@Inject
+	@Autowired
 	private SqlSession sqlSession;
 	
 	private static final String namespace = "org.zerock.mapper.MemberMapper";
@@ -25,6 +24,11 @@ public class MemberDAOImpl implements MemberDAO {
 	@Override
 	public void insertMember(MemberVO vo) {
 		sqlSession.insert(namespace + ".insertMember", vo);  
+	}
+	
+	@Override
+	public MemberVO getUsersByID(String userName) {
+		return sqlSession.selectOne(namespace + ".getUsersByID", userName);
 	}
 
 	@Override
@@ -41,4 +45,5 @@ public class MemberDAOImpl implements MemberDAO {
 		
 		return sqlSession.selectOne(namespace + ".readWithPW" , paramMap);
 	}
+
 }

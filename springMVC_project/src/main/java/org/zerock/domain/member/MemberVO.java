@@ -3,35 +3,35 @@ package org.zerock.domain.member;
 import java.util.Date;
 
 public class MemberVO {
-	private String userid;
-	private String userpw;
-	private String username;
+	private String userId;
+	private String userPw;
+	private String userName;
 	private String email;
-	private Date regdate;
-	private Date updatedate;
+	private Date regDate;
+	private Date updateDate;
 
-	public String getUserid() {
-		return userid;
+	public String getUserId() {
+		return userId;
 	}
 
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 
-	public String getUserpw() {
-		return userpw;
+	public String getUserPw() {
+		return userPw;
 	}
 
-	public void setUserpw(String userpw) {
-		this.userpw = userpw;
+	public void setUserPw(String userPw) {
+		this.userPw = userPw;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getEmail() {
@@ -42,20 +42,20 @@ public class MemberVO {
 		this.email = email;
 	}
 
-	public Date getRegdate() {
-		return regdate;
+	public Date getRegDate() {
+		return regDate;
 	}
 
-	public void setRegdate(Date regdate) {
-		this.regdate = regdate;
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
 	}
 
-	public Date getUpdatedate() {
-		return updatedate;
+	public Date getUpdateDate() {
+		return updateDate;
 	}
 
-	public void setUpdatedate(Date updatedate) {
-		this.updatedate = updatedate;
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
 	}
 
 }

@@ -19,24 +19,30 @@
 			)
 		VALUES
 			(
-				#{userid}
-				,#{userpw}
-				,#{username}
+				#{userId}
+				,#{userPw}
+				,#{userName}
 				,#{email}
 			)
 	</insert>
 	
+	<select id="getUsersByID" resultType="org.zerock.domain.member.MemberVO">	
+		SELECT *
+		FROM TBL_MEMBER
+		WHERE USERNAME = #{userName}
+	</select>
+	
 	<select id="readMember" resultType="org.zerock.domain.member.MemberVO">	
 		SELECT *
 		FROM TBL_MEMBER
-		WHERE USERID = #{userid}
+		WHERE USERID = #{userId}
 	</select>
 	
 	<select id="readWithPW" resultType="org.zerock.domain.member.MemberVO">
 		SELECT *
 		FROM TBL_MEMBER
-		WHERE USERID = #{userid}
-		AND USERPW = #{userpw}
+		WHERE USERID = #{userId}
+		AND USERPW = #{userPw}
 	</select>
 	
 </mapper>
